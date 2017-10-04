@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to create an IMG element.</p>
+
+<button onclick="data_image_set()">Try it</button>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js" charset="utf-8"></script>
+<script>
+
+const sources = "villianess_edsp2l_c_scale,w_1400.jpg"
+const srcSet = "villianess_edsp2l_c_scale,w_200.jpg 200w, villianess_edsp2l_c_scale,w_369.jpg 369w, villianess_edsp2l_c_scale,w_497.jpg 497w, villianess_edsp2l_c_scale,w_606.jpg 606w, villianess_edsp2l_c_scale,w_703.jpg 703w, villianess_edsp2l_c_scale,w_796.jpg 796w, villianess_edsp2l_c_scale,w_881.jpg 881w, villianess_edsp2l_c_scale,w_957.jpg 957w, villianess_edsp2l_c_scale,w_1036.jpg 1036w, villianess_edsp2l_c_scale,w_1107.jpg 1107w, villianess_edsp2l_c_scale,w_1179.jpg 1179w, villianess_edsp2l_c_scale,w_1241.jpg 1241w, villianess_edsp2l_c_scale,w_1306.jpg 1306w, villianess_edsp2l_c_scale,w_1375.jpg 1375w, villianess_edsp2l_c_scale,w_1398.jpg 1398w, villianess_edsp2l_c_scale,w_1400.jpg 1400w"
+
+function data_image_set() {
+    const image = document.createElement("img");
+    image.setAttribute("class", "lazyload")
+    image.setAttribute("data-src", sources);
+    image.setAttribute("data-srcset", srcSet);
+    image.setAttribute("sizes", "(max-width: 1400px) 100vw, 1400px");
+    image.setAttribute("width", "100%");
+    image.setAttribute("alt", "The Pulpit Rock");
+    document.body.appendChild(image);
+}
+
+/*
+function data_image_set() {
+  const image = new Image();
+  image.className = 'lazyload'
+  image.srcset = srcSet;
+  image.src = sources;
+  image.sizes = '(max-width: 1400px) 100vw, 1400px';
+  image.style = 'width: 100%';
+  document.body.appendChild(image);
+} //working
+*/
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
